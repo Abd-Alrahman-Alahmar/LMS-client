@@ -19,13 +19,20 @@ const DashboardHeader: FC<Props> = ({ open, setOpen }) => {
     });
     const [updateNotificationStatus, { isSuccess }] = useUpdateNotificationStatusMutation();
     const [notifications, setNotifications] = useState<any>([]);
-    const [audio] = useState(
-        new Audio(
-            "https://res.cloudinary.com/damk25wo5/video/upload/v1693465789/notification_vcetjn.mp3"
-        )
-    );
+    const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+
+    useEffect(() => {
+        // This check ensures the code runs only in the browser
+        if (typeof window !== "undefined") {
+            const notificationSound = new Audio("https://res.cloudinary.com/damk25wo5/video/upload/v1693465789/notification_vcetjn.mp3");
+            setAudio(notificationSound);
+        }
+    }, []);
+
     const playNotificationSound = () => {
-        audio.play();
+        if (audio) {
+            audio.play();
+        }
     };
 
     useEffect(() => {
@@ -37,7 +44,9 @@ const DashboardHeader: FC<Props> = ({ open, setOpen }) => {
         if (isSuccess) {
             refetch();
         }
+        if (audio) {
         audio.load();
+        }
     }, [data, isSuccess]);
 
     useEffect(() => {
