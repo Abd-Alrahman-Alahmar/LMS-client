@@ -74,7 +74,7 @@ const Hero: FC<Props> = (props) => {
                                 <Image
                                     src={require("../../../public/assests/client-3.jpg")}
                                     alt=""
-                                    className="rounded-full mi-[-20px]"
+                                    className="rounded-full ml-[-20px]"
                                 />
                                 <p className="font-Josefin dark:text-[#edfff4] text-[#000000b3] 1000px:pl-3 text-[18px] font-[600]">
                                     500K+ People already trusted us. {" "}
