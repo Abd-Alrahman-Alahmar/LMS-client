@@ -19,7 +19,7 @@ const CircularProgressWithLabel: FC<Props> = ({ open, value }) => {
                 variant="determinate"
                 value={value}
                 size={45}
-                color={value && value > 99 ? "info" : 'error'}
+                color={value && value > 99 ? "info" : "error"}
                 thickness={4}
                 style={{ zIndex: open ? -1 : 1 }}
             />

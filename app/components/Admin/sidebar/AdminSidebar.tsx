@@ -68,6 +68,9 @@ const SideBar = () => {
                     background: `${theme === "dark" ? "transparent !important" : "#fff !important"
                         }`,
                 },
+                "& .MuiBox-root": {
+                    paddingLeft: "5%"
+                },
                 "& .ps-menuitem-root": {
                    color: `${theme === "dark" ? "#fff !important" : "#111C43 !important"}`,
                 },
