@@ -9,7 +9,7 @@ type Props = {
 const ViemoPlayer: FC<Props> = ({ videoUrl }) => {
 
     useEffect(() => {
-                axios.get(`https://lms-server-ten.vercel.app/api/v1/getVdoCipherOTP?videoId=${videoUrl}`,)},
+                axios.get(`https://lms-server-v2fw.onrender.com/api/v1/getVdoCipherOTP?videoId=${videoUrl}`,)},
                     
              [videoUrl]);
    
