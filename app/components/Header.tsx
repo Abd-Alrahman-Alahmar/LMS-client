@@ -102,14 +102,14 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                                         alt=""
                                         width={30}
                                         height={30}
-                                        className="w-[30px] h-[30px] rounded-full cursor-pointer"
+                                        className="w-[30px] h-[30px] ml-2 rounded-full cursor-pointer"
                                         style={{ border: activeItem === 5 ? "2px solid #37a39a'" : "none" }}
                                     />
                                 </Link>
                             ) : (
                                 <HiOutlineUserCircle
                                     size={25}
-                                    className="hidden 800px:block cursor-pointer dark:text-white text-black"
+                                    className="hidden 800px:block ml-2 cursor-pointer dark:text-white text-black"
                                     onClick={() => setOpen(true)}
                                 />
                             )}
@@ -140,7 +140,7 @@ const Header: FC<Props> = ({ activeItem, setOpen, route, open, setRoute }) => {
                             ) : (
                                 <HiOutlineUserCircle
                                     size={25}
-                                    className="hidden 800px:block cursor-pointer dark:text-white text-black"
+                                    className="800px:block cursor-pointer ml-6 dark:text-white text-black"
                                     onClick={() => setOpen(true)}
                                 />
                             )}
